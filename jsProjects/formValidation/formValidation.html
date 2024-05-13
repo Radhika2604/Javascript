@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <style>
+      body {
+        background-color: #3498db;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      #form-conatiner {
+        padding: 50px;
+        text-align: center;
+        background-color: white;
+      }
+      input {
+        margin: 10px 0;
+        padding: 10px;
+        width: 200px;
+      }
+      input[type="submit"] {
+        width: 222px;
+        background-color: #3498db;
+        border: none;
+        color: white;
+      }
+      .error {
+        color: red;
+        text-align: left;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="form-conatiner">
+      <h2>Login</h2>
+      <form action="" onsubmit="return validateForm()">
+        <input type="text" placeholder="User Name" id="userName" /><br />
+        <p class="error" id="userError"></p>
+        <br />
+        <input type="password" placeholder="Password" id="password" /><br />
+        <p class="error" id="passError"></p>
+        <br />
+        <input type="submit" />
+      </form>
+    </div>
+    <script>
+      let username = document.getElementById("userName");
+      let password = document.getElementById("password");
+      let flag = 1;
+      function validateForm() {
+        if (username.value == "") {
+          document.getElementById("userError").innerHTML = "User Name is empty";
+          flag = 0;
+        } else if (username.value.length < 5) {
+          document.getElementById("userError").innerHTML =
+            "User Name requires minimum 5 char";
+          flag = 0;
+        } else {
+          document.getElementById("userError").innerHTML = "";
+          flag = 1;
+        }
+        if (password.value == "") {
+          document.getElementById("passError").innerHTML = "Password is empty";
+          flag = 0;
+        } else if (password.value.length < 5) {
+          document.getElementById("passError").innerHTML =
+            "Password requires minimum 5 char";
+          flag = 0;
+        } else {
+          document.getElementById("passError").innerHTML = "";
+          flag = 1;
+        }
+        if (flag) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

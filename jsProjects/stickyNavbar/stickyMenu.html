@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Navbar</title>
+  </head>
+  <style>
+    body {
+      margin: 0px;
+    }
+    #header {
+      text-align: center;
+    }
+    #logo {
+      width: 250px;
+      height: auto;
+    }
+    #menu-bar {
+      text-align: center;
+      background-color: rgb(52, 92, 88);
+    }
+    #menu-bar li {
+      display: inline-block;
+      padding: 15px 10px;
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    #container {
+      text-align: center;
+      padding: 50px 100px;
+    }
+    #about-img {
+      width: 100%;
+    }
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+  </style>
+  <body>
+    <div id="header">
+      <img
+        id="logo"
+        src="https://cdn.vox-cdn.com/thumbor/ttHUTh41dvZk5BDu3yJOZvjHx94=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/13674554/Mastercard_logo.jpg"
+        alt="logo"
+      />
+    </div>
+    <nav id="menu-bar" class="sticky">
+      <li>Home</li>
+      <li>About Us</li>
+      <li>Our Teams</li>
+      <li>Client</li>
+      <li>Services</li>
+      <li>Contact Us</li>
+    </nav>
+    <div id="container">
+      <h1>About Us</h1>
+      <img
+        id="about-img"
+        src="https://assets.thehansindia.com/h-upload/2022/07/17/1303453-career.webp"
+        alt="image"
+      />
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente
+        delectus dicta laboriosam, quo quaerat soluta nobis ipsam aspernatur
+        veniam maiores eum cupiditate modi necessitatibus dolorum consectetur
+        dignissimos, exercitationem repellendus voluptates perspiciatis
+        accusamus cum sequi sunt ratione alias! Quae laborum ut, commodi
+        molestias earum iste nulla, voluptate modi fugit et sint animi obcaecati
+        esse, accusamus adipisci repudiandae explicabo quasi. Odit
+        necessitatibus ex, facere praesentium qui possimus provident, dicta
+        adipisci et rerum obcaecati recusandae, ipsa enim fugiat incidunt
+        veritatis quia autem corporis. Maxime quaerat nobis, excepturi
+        laboriosam rem earum dignissimos odio dolorem quae. Nesciunt delectus
+        esse eligendi similique reprehenderit tenetur nemo ipsa possimus
+        cupiditate voluptate quam reiciendis facere quod sunt cumque, dolorum
+        molestias. Laboriosam optio officia tempora blanditiis sed, fugiat
+        adipisci ipsa assumenda obcaecati officiis labore ad quaerat error
+        beatae, quam architecto accusamus provident? Quasi dolores temporibus
+        soluta, illo at veritatis officiis facere maxime, beatae voluptas hic
+        quos esse numquam molestiae amet pariatur dignissimos eligendi iste
+        quia, in natus enim delectus modi voluptatem. Nisi quis enim aut nulla
+        praesentium fugiat ipsa, rerum assumenda temporibus aliquid provident
+        modi voluptate saepe ut recusandae quasi facilis et sequi placeat
+        corporis voluptates. Consectetur blanditiis vel architecto laborum eaque
+        enim minus aliquid ex, placeat, quidem deleniti asperiores tempora
+        exercitationem pariatur, suscipit quisquam maxime unde ea explicabo
+        corporis doloremque earum beatae adipisci? Officiis fuga voluptas
+        laudantium! Modi non neque velit pariatur impedit obcaecati facere
+        dolore, fuga, tenetur quos suscipit autem incidunt earum debitis ullam.
+        Laborum dolores, ex illum alias inventore eius tempore nisi quis quae
+        ducimus iusto obcaecati nihil sed facere repudiandae repellendus
+        exercitationem ad odit. Numquam quos ut quam inventore ab porro ipsa
+        placeat alias incidunt optio. Perferendis recusandae eum nam quae optio
+        quibusdam ad impedit fugiat sequi dolorum eos quasi quos numquam
+        voluptates nulla, rerum adipisci suscipit corrupti itaque. Nostrum
+        aperiam aut et rerum quos unde voluptatum sint deserunt sunt inventore
+        cum dolores provident, quaerat, maxime, non itaque fugit velit optio nam
+        eius dolor. Provident fugiat, aliquam porro laudantium, temporibus unde
+        officia excepturi laboriosam accusamus magni quis, nisi nulla placeat
+        voluptatum? Alias harum porro nulla officia. Illum voluptates quos
+        doloribus atque, voluptas veniam iusto perspiciatis quaerat nemo,
+        aliquid dolores explicabo ad unde distinctio facilis dolorum accusamus
+        necessitatibus praesentium natus commodi nostrum culpa itaque
+        asperiores. Magnam eveniet inventore officiis obcaecati illo possimus
+        ullam porro magni sapiente temporibus. Odio mollitia minima natus sint
+        saepe, suscipit repellat excepturi magni nulla voluptatem sit modi,
+        alias cumque quia facere. Maxime sapiente dignissimos assumenda sunt rem
+        architecto ad nihil repellat dolor dicta aliquam itaque, aut sit atque
+        perferendis illum laborum laboriosam minima accusamus vitae voluptatum.
+        Eius magni repellat, omnis vel totam porro qui quis minus aliquam?
+        Reprehenderit dolor suscipit cum officia? Inventore ipsa exercitationem
+        maiores saepe sapiente molestias eum dicta iste veritatis corporis quis
+        repudiandae, itaque, quidem placeat nostrum repellendus dolores ipsam
+        delectus temporibus ut! Sit quis sapiente esse quos dignissimos. Impedit
+        assumenda nam facere. Itaque amet soluta, aspernatur quibusdam molestiae
+        iure! Consequatur repellat at dolorem, corporis quo libero molestiae
+        perferendis iure. Fuga eius vitae illum tenetur inventore voluptatem
+        esse pariatur odit.
+      </p>
+    </div>
+    <script>
+      window.addEventListener("scroll", function () {
+        let navBar = document.getElementById("menu-bar");
+
+        if (window.pageYOffset >= 254) {
+          navBar.classList.add("sticky");
+        } else {
+          navBar.classList.remove("sticky");
+        }
+      });
+    </script>
+  </body>
+</html>
