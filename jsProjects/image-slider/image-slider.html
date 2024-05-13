@@ -4,6 +4,121 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Image Slider</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .slide-container {
+        position: relative;
+        width: 100%;
+      }
+      .slide {
+        display: none;
+      }
+      .slide img {
+        width: 100%;
+      }
+
+      .arrow {
+        cursor: pointer;
+        position: absolute;
+        top: 45%;
+        color: black;
+        background-color: white;
+        padding: 8px 19px;
+        border-radius: 50%;
+        font-size: 25px;
+        font-weight: bold;
+      }
+      .next {
+        right: 10px;
+      }
+      .prev {
+        left: 10px;
+      }
+      .caption {
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.418);
+        padding: 15px 0;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="slide-container">
+      <div class="slide">
+        <img
+          src="https://i.pinimg.com/736x/00/c7/f6/00c7f69388cf29237599b67e589fbd2d.jpg"
+          alt="image"
+        />
+        <div class="caption">caption 1</div>
+      </div>
+      <div class="slide">
+        <img
+          src="https://m.media-amazon.com/images/I/611H-F6tLbL._AC_UF1000,1000_QL80_.jpg"
+          alt="image"
+        />
+        <div class="caption">caption 2</div>
+      </div>
+      <div class="slide">
+        <img
+          src="https://m.media-amazon.com/images/I/71p-8q3m9cL._AC_UF1000,1000_QL80_.jpg"
+          alt="image"
+        />
+        <div class="caption">caption 3</div>
+      </div>
+      <div class="slide">
+        <img
+          src="https://m.media-amazon.com/images/I/612zNCNqyOL._AC_UF1000,1000_QL80_.jpg"
+          alt="image"
+        />
+        <div class="caption">caption 4</div>
+      </div>
+      <div class="slide">
+        <img
+          src="https://i.pinimg.com/474x/d3/c9/80/d3c980666ce6903106f83ecd056cb61f.jpg"
+          alt="image"
+        />
+        <div class="caption">caption 5</div>
+      </div>
+      <div class="slide">
+        <img
+          src="https://m.media-amazon.com/images/I/71-pEvM1-KL._AC_UF1000,1000_QL80_.jpg"
+          alt="image"
+        />
+        <div class="caption">caption 6</div>
+      </div>
+      <span class="arrow prev" onclick="controller(-1)">&#10094;</span>
+      <span class="arrow next" onclick="controller(1)">&#10095;</span>
+    </div>
+    <script>
+      let flag = 0;
+      function controller(x) {
+        flag = flag + x;
+        slideShow(flag);
+      }
+      slideShow(flag);
+      function slideShow(num) {
+        let slide = document.getElementsByClassName("slide");
+        if (num == slide.length) {
+          flag = 0;
+          num = 0;
+        }
+        if (num < 0) {
+          flag = slide.length - 1;
+          num = slide.length - 1;
+        }
+        for (let y of slide) {
+          y.style.display = "none";
+        }
+        slide[num].style.display = "block";
+      }
+    </script>
+  </body>
 </html>
