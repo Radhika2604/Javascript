@@ -49,11 +49,16 @@
         border: none;
       }
       #msg {
-        font-size: 18vmin;
+        font-size: 15vmin;
         color: black;
       }
       .msg-container {
-        height: 30vmin;
+        height: 100vmin;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
       }
       .hide {
         display: none;
@@ -63,6 +68,7 @@
   <body>
     <div class="msg-container hide">
       <p id="msg">Winner</p>
+      <button id="new-btn">New Game</button>
     </div>
     <main>
       <h1>Tic Tac Toe</h1>
@@ -79,7 +85,6 @@
           <button class="box"></button>
         </div>
       </div>
-      <button id="new-btn" class="hide">New Game</button>
       <button id="reset-btn">Reset Game</button>
     </main>
     <script>
@@ -104,11 +109,9 @@
         turn0 = true;
         enableBoxes();
         msgContainer.classList.add("hide");
-        newGameBtn.classList.add("hide");
       };
       box.forEach((box) => {
         box.addEventListener("click", () => {
-          console.log("box was clicked");
           if (turn0 === true) {
             box.innerText = "O";
             box.style.color = "green";
@@ -130,8 +133,6 @@
       const showWinner = (winner) => {
         msg.innerText = `Congratulations, winner is ${winner}`;
         msgContainer.classList.remove("hide");
-        newGameBtn.classList.remove("hide");
-
         disableBoxes();
       };
       const enableBoxes = () => {
