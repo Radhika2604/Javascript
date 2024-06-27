@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Form</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+         <script src="validate.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h2>Create Account</h2>
+            </div>
+            <form action="#" method="post" onsubmit="return validation();">
+
+            <div class="form">
+            <div class="form-control">
+                <label>Username</label>
+                <input type="text" placeholder="Enter the username" 
+                id="username" ><small>Error message</small></div>
+
+            <div class="form-control">
+                <label>Email</label>
+                <input type="text" placeholder="Enter your email id" 
+                id="email" ><small>Error message</small></div>
+
+                <div class="form-control">
+                <label>Password</label>
+                <input type="password" placeholder="Enter the password" 
+                id="password" ><small>Error message</small></div>
+                
+                <div class="form-control">
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Confirm the password" 
+                id="confirmpass"><small>Error message</small></div>
+                <div id="ereuslt" style="color:red"></div>
+
+                <button type="Submit">Submit</button>
+            </div>
+        
+            </div>
+        </form>
+        </div>
+
+    </body>
+</html>

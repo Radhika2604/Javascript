@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    border: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navBar {
+    height: 70px;
+    background-color: #0f1111;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 60px;
+    width: 200px;
+}
+
+.logo {
+    background: url("https://www.pngall.com/wp-content/uploads/15/Amazon-Logo-White-Transparent.png");
+    background-size: cover;
+    height: 60px;
+    width: 100%;
+}
+
+.border {
+    border: 1px solid transparent;
+}
+
+.border:hover {
+    border: 2px solid white;
+}
+
+.nav-address {
+    color: white;
+}
+
+.add-icon {
+    display: flex;
+    align-items: center;
+}
+
+.add-deliver {
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+.add-india {
+    font-size: 12px;
+    margin-left: 3px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: space-evenly;
+    width: 600px;
+    background-color: bisque;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.search-bar:hover {
+    border: 2px solid #febe6a;
+}
+
+.search-select {
+    background-color: #f3f3f3;
+    width: 50px;
+    text-align: center;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: none;
+}
+
+.search-input {
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+}
+
+.search-icon {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #febe6a;
+    color: black;
+    font-size: 1.2rem;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.hello-signin {
+    font-size: 0.7rem;
+}
+
+.signin-accounts {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.nav-cart {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.nav-cart i {
+    font-size: 30px;
+}
+
+.panel {
+    display: flex;
+    justify-content: space-evenly;
+    height: 40px;
+    background-color: #222f3d;
+    color: white;
+    align-items: center;
+}
+
+.panel p {
+    display: inline;
+    margin-left: 10px;
+}
+
+.panel-ops {
+    width: 70%;
+    font-size: 0.85rem;
+}
+
+.panel-deals {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.hero-section {
+    background: url("https://m.media-amazon.com/images/I/71VBt4eTg3L._SX3000_.jpg");
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero-msg {
+    height: 40px;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    width: 90%;
+    margin-bottom: 25px;
+}
+
+.hero-msg a {
+    color: teal;
+    text-decoration: none;
+}
+
+.shop-section {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(241, 223, 226);
+}
+
+.box {
+    height: 400px;
+    border: 1px solid black;
+    width: 23%;
+
+}
+
+.footer-back-to-top {
+    background-color: #37475A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.footer-back-to-top p {
+    color: white;
+}
+
+.footer-back-to-top a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer {
+    height: 300px;
+    background-color: #232F3E;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.get-to-know {
+    display: flex;
+    flex-direction: column;
+}
+
+.get-to-know p {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.get-to-know a {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.block {
+    width: 300px;
+    height: 300px;
+    background-color: rgb(41, 81, 67);
+    transition: 1s ease-out;
+    background: linear-gradient(to right, #006E74 50%, #EFEEEE 40%) left;
+    background-size: 200%;
+    transform: translateY(100%);
+
+}
+
+.block:hover {
+    background-position: right;
+    background-color: gray;
+
+    .icon {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+        display: inline-block;
+        color: black;
+    }
+
+    .heading {
+        color: black;
+        bottom: 18rem;
+        transform: translateY(0);
+
+
+
+    }
+
+    .desc {
+        display: block;
+        bottom: 18rem;
+        transform: translateY(0);
+
+
+    }
+}
+
+.icon {
+    color: white;
+    font-size: 40px;
+    /* filter: progid: DXImageTransform.Microsoft.BasicImage(rotation=0.5); */
+
+}
+
+.heading {
+    color: #f3f3f3;
+    position: absolute;
+    bottom: 100px;
+    transform: translateY(-100%);
+
+}
+
+.desc {
+    display: none;
+    bottom: 100px;
+    transform: translateY(-100%);
+
+
+}

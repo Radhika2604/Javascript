@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    Hi
+    <script>
+      obj = { a: 10 };
+      const obj2 = { ...obj };
+      console.log(obj, obj2);
+      obj2.a = 20;
+      console.log(obj, obj2);
+      console.log(null == undefined);
+      function first(a) {
+        return function sec(b) {
+          return function third(c) {
+            return a * b * c;
+          };
+        };
+      }
+      console.log(first(2)(3)(4));
+      let mul = (a) => {
+        return (mul2 = (b) => {
+          return (mul3 = (c) => {
+            return a * b * c;
+          });
+        });
+      };
+      console.log(mul(8)(3)(3));
+      function min(num) {
+        let output = num.reduce((acc, curr) => {
+          if (curr > acc) {
+            acc = curr;
+          }
+          return acc;
+        });
+        return output;
+      }
+      console.log(min([10, 20, 30, 40, 200, 400, 5, 100, 8, 9]));
+
+      function getage(...arg) {
+        console.log(typeof arg);
+      }
+      getage(undefined);
+
+      for (let i = 0; i <= 2; i++) {
+        print(i);
+      }
+      function print(i) {
+        setTimeout(() => {
+          console.log(i);
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>
